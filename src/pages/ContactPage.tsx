@@ -2,9 +2,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram, Globe, Phone, Calendar, Send, PhoneIcon as WhatsApp } from 'lucide-react'
+import { Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram, Globe, Phone, Calendar, PhoneIcon as WhatsApp } from 'lucide-react'
 import { Link } from "react-router-dom"
 import MobileSidebar from "@/components/mobile-sidebar"
 
