@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Mail, MapPin, Clock, Facebook, Twitter, Linkedin, Instagram, Globe, Phone, Calendar, PhoneIcon as WhatsApp } from 'lucide-react'
 import { Link } from "react-router-dom"
-import MobileSidebar from "@/components/mobile-sidebar"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
