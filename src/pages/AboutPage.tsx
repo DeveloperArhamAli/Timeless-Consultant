@@ -2,13 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-  Mail,
-  MapPin,
-  Clock,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
   Globe,
   Users,
   Award,
@@ -451,95 +444,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </motion.section>
-
-      {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="bg-gray-900 text-white py-16"
-      >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-3 mb-6">
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center"
-                >
-                  <Globe className="w-6 h-6 text-white" />
-                </motion.div>
-                <div>
-                  <div className="text-2xl font-bold">
-                    Timeless<span className="text-emerald-400">Consultant</span>
-                  </div>
-                  <div className="text-sm text-gray-400">Immigration & Visa Services</div>
-                </div>
-              </motion.div>
-              <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-                Your trusted partner for visa and immigration services worldwide. We make global opportunities
-                accessible through expert guidance and personalized service.
-              </p>
-              <div className="flex gap-4">
-                {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors cursor-pointer"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-              <ul className="space-y-3 text-gray-400">
-                {[
-                  { slug: "/about", label: "About Us" },
-                  { slug: "/services", label: "Our Services" },
-                  { slug: "/success-stories", label: "Success Stories" },
-                  { slug: "/blog", label: "Blog & Resources" },
-                  { slug: "/contact", label: "Contact Us" },
-                ].map((link) => (
-                  <motion.li key={link.slug} whileHover={{ x: 5 }}>
-                    <Link to={link.slug} className="hover:text-emerald-400 transition-colors">
-                      {link.label}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
-              <div className="space-y-4 text-gray-400">
-                <motion.div whileHover={{ x: 5 }} className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 mt-1 flex-shrink-0 text-emerald-400" />
-                  <span>
-                    Rua do rio 27 Odeceixe
-                    <br />
-                    8670-320 Faro Portugal
-                  </span>
-                </motion.div>
-                <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-emerald-400" />
-                  <span>sales@timeless-consultant.com</span>
-                </motion.div>
-                <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-emerald-400" />
-                  <span>Mon-Fri 8AM - 6PM</span>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Timeless Consultant. All rights reserved. | Privacy Policy | Terms of Service</p>
-          </div>
-        </div>
-      </motion.footer>
     </div>
   )
 }

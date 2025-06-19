@@ -124,7 +124,7 @@ export default function MobileSidebar({ currentPath = "/" }: MobileSidebarProps)
               <div className="space-y-3 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-emerald-500" />
-                  <span>+44 730 1948 344</span>
+                  <span>+447301948344</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-emerald-500" />

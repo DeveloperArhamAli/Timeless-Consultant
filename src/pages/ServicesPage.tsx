@@ -3,13 +3,6 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-  Mail,
-  MapPin,
-  Clock,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
   Globe,
   CheckCircle,
   ArrowRight,
@@ -118,10 +111,6 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
-                <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white">
-                  Learn More About Study Visas
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
               </motion.div>
               <motion.div variants={fadeInUp} className="relative">
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8">
@@ -200,10 +189,6 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
-                <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white">
-                  Apply for Visit Visa
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
               </motion.div>
             </motion.div>
 
@@ -274,10 +259,6 @@ export default function ServicesPage() {
                     </div>
                   </div>
                 </div>
-                <Button className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white">
-                  Explore Tour Packages
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
               </motion.div>
               <motion.div variants={fadeInUp} className="relative">
                 <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8">
@@ -463,110 +444,17 @@ export default function ServicesPage() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
               </Link>
-              <a href="tel:+351 123 456 789">
+              <a href="tel:+447 301 948 344">
             <Button
               size="lg"
               className="bg-white text-emerald-600 hover:bg-gray-100 px-12 py-4 text-lg font-semibold shadow-lg"
               >
-              Call Now: +351 123 456 789
+              Call Now: +447 301 948 344
             </Button>
               </a>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="md:col-span-2">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold">
-                    Timeless<span className="text-emerald-400">Consultant</span>
-                  </div>
-                  <div className="text-sm text-gray-400">Immigration & Visa Services</div>
-                </div>
-              </div>
-              <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-                Your trusted partner for visa and immigration services worldwide. We make global opportunities
-                accessible through expert guidance and personalized service.
-              </p>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors cursor-pointer">
-                  <Facebook className="w-5 h-5" />
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors cursor-pointer">
-                  <Twitter className="w-5 h-5" />
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors cursor-pointer">
-                  <Linkedin className="w-5 h-5" />
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors cursor-pointer">
-                  <Instagram className="w-5 h-5" />
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li>
-                  <Link to="/about" className="hover:text-emerald-400 transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/services" className="hover:text-emerald-400 transition-colors">
-                    Our Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/success-stories" className="hover:text-emerald-400 transition-colors">
-                    Success Stories
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" className="hover:text-emerald-400 transition-colors">
-                    Blog & Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="hover:text-emerald-400 transition-colors">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
-              <div className="space-y-4 text-gray-400">
-                <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 mt-1 flex-shrink-0 text-emerald-400" />
-                  <span>
-                    Rua do rio 27 Odeceixe
-                    <br />
-                    8670-320 Faro Portugal
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-emerald-400" />
-                  <span>sales@timeless-consultant.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-emerald-400" />
-                  <span>Mon-Fri 8AM - 6PM</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Timeless Consultant. All rights reserved. | Privacy Policy | Terms of Service</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

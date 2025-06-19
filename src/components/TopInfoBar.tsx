@@ -13,7 +13,7 @@ function TopInfoBar() {
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-2 sm:mb-0">
             <motion.div whileHover={{ scale: 1.1 }} className="flex items-center gap-2">
               <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400" />
-              <span className="text-center sm:text-left">Rua do rio 27 Odeceixe 8670-320 Faro Portugal</span>
+              <span className="text-center sm:text-left">721 Stockport Road, Manchester M19 3AG</span>
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }} className="flex items-center gap-2">
               <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400" />

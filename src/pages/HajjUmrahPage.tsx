@@ -6,13 +6,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-  Mail,
-  Clock,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Globe,
   CheckCircle,
   ArrowRight,
   Users,
@@ -88,22 +81,15 @@ export default function HajjUmrahPage() {
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
               >
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button
-                    size="lg"
-                    className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-emerald-600 hover:from-purple-700 hover:to-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg shadow-lg"
-                  >
-                    Book Umrah 2025
-                    <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-                  </Button>
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="w-full sm:w-auto border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg"
-                  >
-                    View Packages
-                  </Button>
+                  <Link to={"/contact"}>
+                    <Button
+                      size="lg"
+                      className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-emerald-600 hover:from-purple-700 hover:to-emerald-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg shadow-lg"
+                      >
+                      Book Umrah 2025
+                      <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                    </Button>
+                  </Link>
                 </motion.div>
               </motion.div>
               <motion.div
@@ -134,7 +120,7 @@ export default function HajjUmrahPage() {
                 className="bg-gradient-to-br from-purple-100 to-emerald-100 rounded-2xl sm:rounded-3xl p-4 sm:p-8"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src="https://images.unsplash.com/photo-1565019001609-0e34a6a22189?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Kaaba in Mecca - Sacred pilgrimg destination for Hajj and Umrah"
                   width={500}
                   height={600}
@@ -281,18 +267,6 @@ export default function HajjUmrahPage() {
                         </motion.li>
                       ))}
                     </ul>
-                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                      <Button
-                        className={`w-full text-sm ${
-                          pkg.popular
-                            ? "bg-gradient-to-r from-purple-600 to-emerald-600 hover:from-purple-700 hover:to-emerald-700 text-white"
-                            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                        }`}
-                      >
-                        Book This Package
-                        <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                      </Button>
-                    </motion.div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -408,111 +382,30 @@ export default function HajjUmrahPage() {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="lg"
-                className="w-full sm:w-auto bg-white text-purple-600 hover:bg-gray-100 px-8 sm:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold shadow-lg"
-              >
-                <WhatsApp className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-                WhatsApp: +44 730 1948 344
-              </Button>
+              <a href="https://wa.me/+447301948344" target="_blank">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-white text-purple-600 hover:bg-gray-100 px-8 sm:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold shadow-lg"
+                  >
+                  <WhatsApp className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  WhatsApp: +447301948344
+                </Button>
+              </a>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link to={"/contact"}>
               <Button
                 size="lg"
                 className="w-full sm:w-auto bg-white text-purple-600 hover:bg-gray-100 px-8 sm:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold shadow-lg"
-              >
+                >
                 <Calendar className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
                 Book Consultation
               </Button>
+                </Link>
             </motion.div>
           </motion.div>
         </div>
       </motion.section>
-
-      {/* Footer */}
-      <motion.footer
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="bg-gray-900 text-white py-12 sm:py-16"
-      >
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
-            <div className="sm:col-span-2">
-              <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-3 mb-4 sm:mb-6">
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center"
-                >
-                  <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-                </motion.div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-bold">
-                    Timeless<span className="text-emerald-400">Consultant</span>
-                  </div>
-                  <div className="text-xs sm:text-sm text-gray-400">Travel & Immigration Services</div>
-                </div>
-              </motion.div>
-              <p className="text-sm sm:text-base text-gray-400 mb-4 sm:mb-6 leading-relaxed max-w-md">
-                Your trusted partner for Hajj, Umrah, and travel services. We make sacred journeys accessible through
-                expert guidance and personalized service.
-              </p>
-              <div className="flex gap-3 sm:gap-4">
-                {[Facebook, Twitter, Linkedin, Instagram].map((Icon, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-emerald-600 transition-colors cursor-pointer"
-                  >
-                    <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Quick Links</h3>
-              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-400">
-                {[
-                  { href: "/about", label: "About Us" },
-                  { href: "/services", label: "Our Services" },
-                  { href: "/hajj-umrah", label: "Hajj & Umrah" },
-                  { href: "/success-stories", label: "Success Stories" },
-                  { href: "/contact", label: "Contact Us" },
-                ].map((link) => (
-                  <motion.li key={link.href} whileHover={{ x: 5 }}>
-                    <Link to={link.href} className="hover:text-emerald-400 transition-colors">
-                      {link.label}
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Contact Info</h3>
-              <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-400">
-                <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3">
-                  <WhatsApp className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
-                  <span>+44 730 1948 344</span>
-                </motion.div>
-                <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3">
-                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
-                  <span>your@email.com</span>
-                </motion.div>
-                <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
-                  <span>24/7 Support Available</span>
-                </motion.div>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-400">
-            <p>&copy; 2024 Timeless Consultant. All rights reserved. | Privacy Policy | Terms of Service</p>
-          </div>
-        </div>
-      </motion.footer>
     </div>
   )
 }

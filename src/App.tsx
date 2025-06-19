@@ -1,13 +1,18 @@
 import { Outlet } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import TopInfoBar from "./components/TopInfoBar"
+import Footer from "./components/Footer"
+import Layout from "./components/Layout"
 
 function App() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <TopInfoBar />
       <Navbar />
-      <Outlet />
+      <Layout>
+        <Outlet />
+      </Layout>
+      <Footer />
     </div>
   )
 }

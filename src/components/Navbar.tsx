@@ -54,21 +54,24 @@ function Navbar() {
               ))}
             </div>
 
-            {/* Desktop CTA Buttons */}
             <div className="hidden sm:flex items-center gap-2 lg:gap-4">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <a href="tel:+447 301 948 344">
                 <Button variant="outline" size="sm" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
                   <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   <span className="text-xs sm:text-sm">Call</span>
                 </Button>
+                </a>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button
-                  size="sm"
-                  className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-3 sm:px-6"
-                >
-                  <span className="text-xs sm:text-sm">Free Consultation</span>
-                </Button>
+                <Link to={"/contact"}>
+                  <Button
+                    size="sm"
+                    className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-3 sm:px-6"
+                    >
+                    <span className="text-xs sm:text-sm">Free Consultation</span>
+                  </Button>
+                </Link>
               </motion.div>
             </div>
 
